@@ -1,0 +1,289 @@
+@font-face {
+	font-family: num_maya;
+	src: url('/tools/assets/mesocals/maya_nums.ttf');
+}
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+@keyframes fadeout {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+body {
+	min-height: 100vh;
+	min-width: 100vw;
+	max-width: 100vw;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+}
+header.main h2, header.main h4 {
+	display: block;
+	text-align: center;
+}
+header.main {
+	width: 100vw;
+	min-height: 100px;
+	height: 12vh;
+	position: relative;
+	top: 0;
+	left: 0;
+	margin: 0;
+	overflow: hidden;
+	background-color: #ec8;
+}
+#wrapall {
+	width: calc(100vw - 6em);
+	min-height: calc(100vh - calc(100px + 1em));
+	position: relative;
+	left: 3em;
+	top: 0.5em;
+}
+@media only screen and (min-width: 960px) {
+  #wrapall {
+	  display: grid;
+	  grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+textarea {
+	vertical-align: middle;
+	width: 4em;
+	height: 1.3em;
+}
+td:not(:last-child) {
+	border-right: 1px solid #000;
+}
+td:nth-child(2n) {
+	background-color: #eee;
+}
+tr:not(:last-child) td:not(#sheet_greg_day25):not(#sheet_greg_day26):not(#sheet_greg_day27):not(#sheet_greg_day28) {
+	border-bottom: 1px solid #ccc;
+}
+td, #count_specs {
+	text-align: center;
+	padding: 0;
+}
+#sheet_greg_head, #sheet_count_head {
+	background-color: #4085AB;
+	display: inline-block;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	width: 100%;
+	text-align: center;
+}
+#sheet_greg, #sheet_count {
+	box-shadow: 0 4px 7px 2px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	display: inline-block;
+	position: relative;
+}
+#sheet_greg {
+	width: 66%;
+	left: 17%;
+}
+#sheet_count {
+	width: 50%;
+	left: 25%;
+}
+#cal_greg:not(#cal_greg *), #cal_scount:not(#cal_scount *), #row_long:not(#row_long *) {
+	position: relative;
+	margin: 0.5em;
+}
+#cal_greg:not(#cal_greg *), #cal_scount:not(#cal_scount *) {
+	width: calc(calc(calc(100vw - 6em) / 3) - 1em);
+	height: 100%;
+}
+#sheet_greg_days, #sheet_count_days {
+	width: 100%;
+}
+#row_long_head, .yeoldespancenter {
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+}
+#row_rite img {
+	max-width: calc(60vw / 3);
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#row_rite_head {
+	text-align: center;
+}
+.multiimagestack {
+	position: relative;
+}
+#round13 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+#round20 {
+	position: absolute;
+	transition: transform .5s;
+	left: 0;
+	right: 0;
+}
+#faceDisp {
+	position: relative;
+	width: calc(20vw / 3);
+	z-index: 3;
+	top: calc(17.5vw / 4);
+}
+#faceDisp.may, #faceDisp.zaa {
+	filter: invert(100%);
+}
+.yeoldespancenter select {
+	margin-top: 4vh;
+}
+.yeoldefalsebutton {
+	background-color: #305721;
+	width: 12em;
+	text-align: center;
+	display: inline-block;
+	color: #fff;
+	transition: background-color .6s;
+}
+.inputwrap {
+	text-align: center;
+}
+td.cellect {
+	background-color: #2f4f4f;
+	color: #ffffff;
+}
+.sheethead {
+	color: #ffffff;
+}
+.caltitle {
+	text-align: center;
+}
+.hlarrow {
+	position: relative;
+	display: block;
+	background-color: #AF966D;
+	margin: 0 auto 12px;
+	max-width: calc(500% / 6);
+	height: 2px;
+}
+.hlarrow::before, .hlarrow::after {
+	position: absolute;
+	content: "";
+	background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyNC4yLjIsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iZGl2aWRlciIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSIyNXB4IiBoZWlnaHQ9IjhweCIgdmlld0JveD0iMCAwIDI1IDgiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI1IDg7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+DQoJLnN0MHtmaWxsOiNCNjlBNjg7fQ0KPC9zdHlsZT4NCjxwb2x5Z29uIGlkPSJhcnJvdyIgY2xhc3M9InN0MCIgcG9pbnRzPSIyNC41LDUuMDI3IDIxLjgyMiw3Ljc0NCAxOS4zNDMsNS4yMyAxNy4wOTUsNy43NDQgMC41LDQuMjY3IDAuNSwzLjk3NyAxNy4wOTUsMC41IA0KCTE5LjM0MywzLjAxNCAyMS44MjIsMC41IDI0LjUsMy4yMTYgIi8+DQo8L3N2Zz4NCg==") center center no-repeat;
+	width: 24px;
+	height: 8px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.hlarrow::before {
+	left: -24px;
+}
+.hlarrow::after {
+	-webkit-transform: translateY(-50%) scaleX(-1);
+	transform: translateY(-50%) scaleX(-1);
+	right: -24px;
+}
+.ded {
+	pointer-events: none;
+	background-color: #696969;
+}
+.nummaya {
+	font-family: num_maya;
+	font-size: 1.5em;
+}
+.glyphline {
+	position: relative;
+	width: 100%;
+	background-image: url("https://assets.nintendo.com/image/upload/c_fit,h_16/q_auto/f_auto//Microsites/zelda-totk-pmp/uyy0v9r3veb0gal0egxc");
+	background-size: contain;
+	background-repeat: repeat-x;
+	height: 0.75rem;
+	z-index: 1;
+}
+.glyphline.withon {
+	animation: fadeout 4s ease-out alternate infinite;
+}
+.glowline.withoff {
+	position: relative;
+	width: 100%;
+	background-image: url("https://assets.nintendo.com/image/upload/c_fit,h_16/q_auto/f_auto//Microsites/zelda-totk-pmp/paff4yihslvyoqk38y5e");
+	background-size: contain;
+	background-repeat: repeat-x;
+	height: 0.75rem;
+	top: -.75rem;
+}
+.glowline.withoff {
+	animation: fadein 4s ease-out alternate infinite;
+}
+.deathd .unbis *, .zaa_act.zaa_last .unbis, .zaa_act.zaa_last.deathd #third, .zaa_act.zaa_last #fourth, .zaa_act.zaa_last #fifth, .zaa_act.zaa_odd #twentieth {
+	display: none;
+}
+.deathbis .unbis *:not(.sixth) {
+	display: none;
+}
+.info {
+	font-style: italic;
+	font-size: .9em;
+}
+.subt {
+	text-align: center;
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	top: -1em;
+}
+#ft {
+  text-align: center;
+  margin-top: 10px;
+  width: 100%;
+}
+@media (max-width: 600px) {
+	#kweel {
+		width: 60vw;
+		height: 15vw;
+	}
+}
+@media (min-width: 601px) {
+	#kweel {
+		width:25vw;
+		height:calc(25vw / 4);
+	}
+	#row_long:not(#row_long *) {
+	  width: calc(calc(calc(100vw - 6em) / 3) - 1em);
+	}
+}
+#kweel {
+	min-height: 25px;
+	min-width: 100px;
+	display: block;
+  margin: 0 auto;
+}
+#kweel-wrap {
+  display: inline-block;
+  width: fit-content;
+  height: fit-content;
+}
+#romanised_sc_wrap {
+  font-style: italic;
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
