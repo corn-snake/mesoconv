@@ -1,0 +1,285 @@
+<!doctype html>
+<html>
+	<head>
+	  <link rel="icon" href="/eep.png">
+		<title>Meso-convert</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<script src="/tools/assets/mesocals/workings/newcal.js"></script>
+	</head>
+	<body onload="document.getElementById('year_greg').dispatchEvent(new Event('input'));document.getElementById('day_greg').dispatchEvent(new Event('input'));document.getElementById('forcer').classList.add('ded');document.querySelector('#daynsign input[type=radio]:checked').dispatchEvent(new Event('click'));">
+		<header class="main">
+				<h2>Mesoamerican Calendar Translator</h2>
+				<h4>may contain other calendars</h4>
+		</header>
+		<div id="wrapall">
+			<span id="cal_greg">
+				<span class="caltitle"><h3 id="greggyhead">Gregorian Calendar</h3></span><div class="hlarrow body"></div>
+				<span class="inputwrap"><textarea id="year_greg">-8239</textarea>&nbsp;&mdash;&nbsp;
+				<select name="month_greg" id="month_greg" value="4">
+					<option value="1">January</option>
+					<option value="2">February</option>
+					<option value="3">March</option>
+					<option value="4" selected="selected">April</option>
+					<option value="5">May</option>
+					<option value="6">June</option>
+					<option value="7">July</option>
+					<option value="8">August</option>
+					<option value="9">September</option>
+					<option value="10">October</option>
+					<option value="11">November</option>
+					<option value="12">December</option>
+				</select>&nbsp;&mdash;&nbsp;
+				<select name="day_greg" id="day_greg" value="1">
+					<option value="1" selected="selected">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+					<option value="25">25</option>
+					<option value="26">26</option>
+					<option value="27">27</option>
+					<option value="28">28</option>
+					<option value="29" id="gregs_leapday">29</option>
+					<option value="30" id="themonthoftwo">30</option>
+					<option value="31" id="themanymonths">31</option>
+				</select></span><br />
+				<div id="sheet_greg">
+					<header id="sheet_greg_head" class="sheethead">
+						<h4><svg id="greg_bigback" height="15px" width="15px" viewbox="0 0 20 20"><path stroke="#fff" fill="none" d="M0 10 L10 0 L10 20 L0 10Z" /><path stroke="#fff" fill="#fff" d="M5 10 L20 0 L20 20 L5 10Z" /></svg><svg id="greg_smaback" height="15px" width="15px" viewbox="0 0 10 10"><path stroke="#fff" fill="#fff" d="M3 5 L10 10 L10 0 L3 5Z" /></svg>&nbsp;&nbsp;<span id="sheet_greg_year">-8239</span>&nbsp;&mdash;&nbsp;<span id="sheet_greg_month">#####</span>&nbsp;&nbsp;<svg id="greg_smaforward" height="15px" width="15px" viewbox="0 0 10 10"><path stroke="#fff" fill="#fff" d="M7 5 L0 0 L0 10 L7 5Z" /></svg><svg id="greg_bigforward" height="15px" width="15px" viewbox="0 0 20 20"><path stroke="#fff" fill="none" d="M20 10 L10 0 L10 20 L20 10Z" /><path stroke="#fff" fill="#fff" d="M0 0 L15 10 L0 20 L0 0Z" /></svg></h4>
+					</header>
+					<table id="sheet_greg_days">
+						<tbody>
+							<tr>
+								<td onclick="changeDay_g(1)" class="cellect" id="firstg">1</td>
+								<td onclick="changeDay_g(2)">2</td>
+								<td onclick="changeDay_g(3)">3</td>
+								<td onclick="changeDay_g(4)">4</td>
+								<td onclick="changeDay_g(5)">5</td>
+								<td onclick="changeDay_g(6)">6</td>
+								<td onclick="changeDay_g(7)">7</td>
+							</tr>
+							<tr>
+								<td onclick="changeDay_g(8)">8</td>
+								<td onclick="changeDay_g(9)">9</td>
+								<td onclick="changeDay_g(10)">10</td>
+								<td onclick="changeDay_g(11)">11</td>
+								<td onclick="changeDay_g(12)">12</td>
+								<td onclick="changeDay_g(13)">13</td>
+								<td onclick="changeDay_g(14)">14</td>
+							</tr>
+							<tr>
+								<td onclick="changeDay_g(15)">15</td>
+								<td onclick="changeDay_g(16)">16</td>
+								<td onclick="changeDay_g(17)">17</td>
+								<td onclick="changeDay_g(18)">18</td>
+								<td onclick="changeDay_g(19)">19</td>
+								<td onclick="changeDay_g(20)">20</td>
+								<td onclick="changeDay_g(21)">21</td>
+							</tr>
+							<tr>
+								<td onclick="changeDay_g(22)">22</td>
+								<td onclick="changeDay_g(23)">23</td>
+								<td onclick="changeDay_g(24)">24</td>
+								<td onclick="changeDay_g(25)">25</td>
+								<td onclick="changeDay_g(26)">26</td>
+								<td onclick="changeDay_g(27)">27</td>
+								<td onclick="changeDay_g(28)">28</td>
+							</tr>
+							<tr id="febs">
+								<td onclick="changeDay_g(29)">29</td>
+								<td onclick="changeDay_g(30)">30</td>
+								<td onclick="changeDay_g(31)">31</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<br /><br />
+				<div class="yeoldespancenter">
+					<span id="teenytiny"><span id="teenyback">&#x27f5;</span><span id="forcer">&nbsp;&mDDot;&nbsp;</span><span id="teenyforward">&#x27f6;</span></span>
+				</div>
+				<span class="info">After selecting a date with the boxes, click the symbol between the arrows below the calendar to get the tool working<br/>You can also use the different arrows to navigate with the mouse only: the double-triangles will change the year, the normal triangles will change the month, and the black arrows will change the day.</span>
+				<br /><br />
+			</span>
+			<div id="panmesos" class="rows2">
+				<div id="row_long">
+				<!-- select id="piktun"></select>.
+				<select id="b_ak_tun"></select>.
+				<select id="k_atun"></select>.
+				<select id="tun"></select>.
+				<select id="winal"></select>.
+				<select id="k_in"></select
+				this was supposed to be for the rev-conv but i'ven't yet figured that out -->
+					<span id="row_long_head">
+						<span class="caltitle">
+							<h3>Long Count</h3>
+						</span>
+						<div class="hlarrow body"></div>
+						<span id="msgfin">0.0.0.0.0.0</span>
+					</span>
+				</div>
+				<div id="row_shorts">
+				  <span class="row_shorts_head">
+				    <span class="shortitle caltitle">
+				      <h4 title="Short Count">&#x2767; Waslason K'atun</h4>
+				    </span>
+				  </span>
+				  <span id="kweel_wrap">
+  				  <svg id="kweel" viewbox="0 0 100 25" preserveAspectRatio="none">
+        			<path d="M0 25 Q50 -20 100 25" stroke="#000" fill="transparent"/>
+        			<circle cx="57.5" cy="15" r="9" stroke="#000" fill="transparent"/>
+        			<circle cx="57.5" cy="20" r="1.2" stroke="#000" fill="transparent"/>
+        			<circle cx="53" cy="13" r="1.2" stroke="#000" fill="transparent"/>
+        			<circle cx="62" cy="13" r="1.2" stroke="#000" fill="transparent"/>
+        			<path d="M51 21 Q57.5 12 64 21" stroke="#000" fill="transparent"/>
+        			<path d="M55 6 Q57 10 56.75 16.5" stroke="#000" fill="transparent"/>
+        			<path d="M60 6 Q58 10 58.5 16.5" stroke="#000" fill="transparent"/>
+        			<text id="shortnum" style="font-size:inherit;" class="nummaya" alignment-baseline="middle" transform="translate(45,23) rotate(270)" fill="red">𝋤</text>
+        		</svg><br/>
+        		<span id="romanised_sc_wrap"><span id="katun_number_rom">4</span>&nbsp;Ajaw</span>
+        		<br/>
+        		<span id="first_time_sc" class="info">If indeed K'atuns were counted like decades, then it stands to reason that the first day of the Long Count was not the first day of a K'atun at all. For practicality, the converter simply assumes it part of a "ghost" K'atun 4 Ajaw</span>
+        	</span>
+				</div>
+				<div class="glyphline withon"></div>
+				<div class="glowline withoff"></div>
+				<div id="row_jade">
+					<span id="row_jade_head">
+						<span class="caltitle">
+							<h3>Year Count<sub>(s)</sub></h3>
+						</span><span class="info subt">Now Displaying:&nbsp;<span id="name_ycal"></span></span>
+						<div class="hlarrow body"></div>
+						<span id="thingfin"></span>
+					</span>
+					<div id="sheet_count">
+						<header id="sheet_count_head" class="sheethead">
+							<h4><span id="sheet_count_year">8 Rabbit</span>&nbsp;&mdash;&nbsp;<span id="sheet_count_month">Tosostontli</span></h4>
+						</header>
+						<table id="sheet_count_days">
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>2</td>
+									<td class="cellect" id="third">3</td>
+									<td id="fourth">4</td>
+									<td id="fifth">5</td>
+								</tr>
+								<tr class="unbis">
+									<td class="sixth">6</td>
+									<td>7</td>
+									<td>8</td>
+									<td>9</td>
+									<td>10</td>
+								</tr>
+								<tr class="unbis">
+									<td>11</td>
+									<td>12</td>
+									<td>13</td>
+									<td>14</td>
+									<td>15</td>
+								</tr>
+								<tr class="unbis">
+									<td>16</td>
+									<td>17</td>
+									<td>18</td>
+									<td>19</td>
+									<td id="twentieth">20</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<span id="count_specs">
+						<h4>(Enanwixui:&nbsp;<span id="count_thebe">#####</span>T&middot;<span id="count_ani">#####</span>A)</h4>
+					</span><div id="spacers_mayfix"><br/><br/></div>
+				</div>
+				<!--div class="glyphline withon"></div>
+				<div class="glowline withoff"></div>
+				<div id="row_katun"><span class="caltitle">
+					<h3>Short Count</h3>
+				</span>
+				<div class="hlarrow body"></div>
+				<div class="caltitle">
+					<span>K'atun&nbsp;</span><span id="katunmsg"></span><span>&nbsp;Ajaw</span></div>
+				</div-->
+			</div>
+			<span id="cal_scount">
+				<span class="caltitle"><h3>Day Count</h3></span><span class="info subt">Now Displaying:&nbsp;<span id="name_scal"></span></span><div class="hlarrow body"></div>
+				<div id="row_rite">
+					<div id="row_rite_head">
+						<div id="daynsign">
+							<input type="radio" name="yuh" id="yuhchange" onclick="updateFace('yuh')">Yühü: <span id="hname"><span id="hn_d_num">4</span>&nbsp;<span id="hn_d_sign">Ant&uuml;</span></span><br />
+							<input type="radio" name="nah" id="nahchange" onclick="updateFace('nah')" checked="checked">Nawatl: <span id="nname"><span id="naw_d_num">4</span>&nbsp;<span id="naw_d_sign">Mikistli</span></span><br />
+							<input type="radio" name="may" id="maychange" onclick="updateFace('may')">Maya: <span id="mname"><span id="may_d_num">3</span>&nbsp;<span id="may_d_sign">Kimi</span></span><br />
+							<!--input type="radio" name="nsa" id="nsachange" onclick="updateFace('nsa')" disabled="disabled">Dza'a Dzawi: <span id="nsname"><span id="nsa_d_num">4</span>&nbsp;<span id="nsa_d_sign">Ant&uuml;</span></span><br /-->
+							<input type="radio" name="zaa" id="zaachange" onclick="updateFace('zaa')">Zaa: <span id="zname"><span id="zaa_d_num">3</span>&nbsp;<span id="zaa_d_sign">Kimi</span></span><br />
+						</div>
+						&mdash;<div class="nummaya" id="roundNum"></div>&mdash;
+					</div>
+					<div class="multiimagestack"><img id="round20" src="/tools/assets/mesocals/20-round.png" />
+						<img id="round13" src="/tools/assets/mesocals/13-round.png" />
+						<img id="faceDisp" />
+					</div><br />
+				</div>
+			</span>
+		</div>
+		<footer id="ft">
+			<span><a href="/">Home</a>&nbsp;&mdash;&nbsp;<a href="https://www.tumblr.com/ra-tutubixi/721629123664052224/the-wheel-ever-turning-a-new-system-for">How it Works</a></span>
+		</footer>
+		<link rel="stylesheet" href="/tools/assets/mesocals/workings/all.css" />
+		<script src="/tools/assets/mesocals/workings/navi.js"></script>
+		<script src="/tools/assets/mesocals/workings/aesth.js"></script>
+		<link rel="prefetch" href="/tools/assets/mesocals/zaa_6.png" as="image">
+		<link rel="prefetch" href="/tools/assets/mesocals/zaa_7.png" as="image">
+		<link rel="prefetch" href="/tools/assets/mesocals/zaa_8.png" as="image">
+		<link rel="prefetch" href="/tools/assets/mesocals/zaa_9.png" as="image">
+		<link rel="prefetch" href="/tools/assets/mesocals/zaa_a.png" as="image">
+		<link rel="prefetch" href="/tools/assets/mesocals/zaa_b.png" as="image">
+		<link rel="prefetch" href="/tools/assets/mesocals/zaa_c.png" as="image">
+		<link rel="prefetch" href="/tools/assets/mesocals/zaa_d.png" as="image">
+		<link rel="prefetch" href="/tools/assets/mesocals/zaa_e.png" as="image">
+		<link rel="prefetch" href="/tools/assets/mesocals/zaa_f.png" as="image">
+		<link rel="prefetch" href="/tools/assets/mesocals/zaa_g.png" as="image">
+		<link rel="prefetch" href="/tools/assets/mesocals/zaa_h.png" as="image">
+		<link rel="prefetch" href="/tools/assets/mesocals/zaa_i.png" as="image">
+		<link rel="prefetch" href="/tools/assets/mesocals/zaa_j.png" as="image">
+		<link rel="prefetch" href="/tools/assets/mesocals/zaa_k.png" as="image">
+		<link rel="prefetch" href="/tools/assets/mesocals/zaa_1.png" as="image">
+		<link rel="prefetch" href="/tools/assets/mesocals/zaa_2.png" as="image">
+		<link rel="prefetch" href="/tools/assets/mesocals/zaa_3.png" as="image">
+		<link rel="prefetch" href="/tools/assets/mesocals/zaa_4.png" as="image">
+		<link rel="prefetch" href="/tools/assets/mesocals/zaa_5.png" as="image">
+		<script>
+		  if (!localStorage.getItem("lastDate")) {
+		    let d = new Date();
+		    localStorage.setItem("lastDate",[d.getFullYear(),d.getMonth() + 1, d.getDay() + 1].join(','));
+		  }
+		  let ld = localStorage.getItem("lastDate").split(",");
+			document.querySelector("#year_greg").value = ld[0];
+		  document.querySelector("#month_greg").value = ld[1];
+		  document.querySelector("#day_greg").value = ld[2];
+		  document.getElementById("year_greg").dispatchEvent(new Event('input'));
+		  document.getElementById("month_greg").dispatchEvent(new Event('input'));
+		  document.getElementById("day_greg").dispatchEvent(new Event('input'));
+		  document.getElementById("forcer").dispatchEvent(new Event('click'));
+		</script>
+	</body>
+</html>
