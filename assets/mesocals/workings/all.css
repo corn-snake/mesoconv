@@ -104,6 +104,9 @@ td, #count_specs {
 	position: relative;
 	margin: 0.5em;
 }
+#row_long {
+	top: -1em;
+}
 #cal_greg:not(#cal_greg *), #cal_scount:not(#cal_scount *) {
 	width: calc(calc(calc(100vw - 6em) / 3) - 1em);
 	height: 100%;
@@ -273,7 +276,7 @@ td.cellect {
 	min-height: 25px;
 	min-width: 100px;
 	display: block;
-  margin: 0 auto;
+	margin: 0 auto;
 }
 #kweel-wrap {
   display: inline-block;
@@ -286,4 +289,21 @@ td.cellect {
   text-align: center;
   display: inline-block;
   width: 100%;
+}
+#panmesos {
+	&:not(.may, .zaa) {
+		#row_long,
+			.glyphline,
+			.glowline {
+			display: none;
+		}
+	}	
+	&:not(.may) {
+		#row_shorts {
+			display: none;
+		}
+	}
+	&.zaa .glyphline {
+		margin-top: 2em;
+	}
 }

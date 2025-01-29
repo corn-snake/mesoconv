@@ -160,16 +160,21 @@ function getLCEDate_minusleaps(feed) {
     accDayes += reDate[2] - hepoch[2];
     return accDayes;
 }  // only used for the short round; since it skips leaps, we can also just disregard those here
+function changeBigClass(to, target="panmesos") {
+    const pm = document.getElementById(target),
+        c = [...pm.classList];
+    if (c[0] == to) return;
+    pm.classList.add(to);
+    pm.classList.remove(c[0]);
+}
 function updateFace(t) {
     let allChange = ["yuh", "nah", "may", "zaa"];
     allChange.splice(allChange.indexOf(t),1);
     document.getElementById(allChange[0] + "change").checked = false;
     document.getElementById(allChange[1] + "change").checked = false;
     document.getElementById(allChange[2] + "change").checked = false;
-    document.getElementById('faceDisp').classList.remove(allChange[0]);
-    document.getElementById('faceDisp').classList.remove(allChange[1]);
-    document.getElementById('faceDisp').classList.remove(allChange[2]);
-    document.getElementById('faceDisp').classList.add(t);
+    changeBigClass(t, 'faceDisp');
+    changeBigClass(t);
     document.getElementById('forcer').dispatchEvent(new Event('click'));
 }
 function getYCArr (rawc) {

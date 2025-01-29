@@ -120,48 +120,7 @@
 				<span class="info">After selecting a date with the boxes, click the symbol between the arrows below the calendar to get the tool working<br/>You can also use the different arrows to navigate with the mouse only: the double-triangles will change the year, the normal triangles will change the month, and the black arrows will change the day.</span>
 				<br /><br />
 			</span>
-			<div id="panmesos" class="rows2">
-				<div id="row_long">
-				<!-- select id="piktun"></select>.
-				<select id="b_ak_tun"></select>.
-				<select id="k_atun"></select>.
-				<select id="tun"></select>.
-				<select id="winal"></select>.
-				<select id="k_in"></select
-				this was supposed to be for the rev-conv but i'ven't yet figured that out -->
-					<span id="row_long_head">
-						<span class="caltitle">
-							<h3>Long Count</h3>
-						</span>
-						<div class="hlarrow body"></div>
-						<span id="msgfin">0.0.0.0.0.0</span>
-					</span>
-				</div>
-				<div id="row_shorts">
-				  <span class="row_shorts_head">
-				    <span class="shortitle caltitle">
-				      <h4 title="Short Count">&#x2767; Waslason K'atun</h4>
-				    </span>
-				  </span>
-				  <span id="kweel_wrap">
-  				  <svg id="kweel" viewbox="0 0 100 25" preserveAspectRatio="none">
-        			<path d="M0 25 Q50 -20 100 25" stroke="#000" fill="transparent"/>
-        			<circle cx="57.5" cy="15" r="9" stroke="#000" fill="transparent"/>
-        			<circle cx="57.5" cy="20" r="1.2" stroke="#000" fill="transparent"/>
-        			<circle cx="53" cy="13" r="1.2" stroke="#000" fill="transparent"/>
-        			<circle cx="62" cy="13" r="1.2" stroke="#000" fill="transparent"/>
-        			<path d="M51 21 Q57.5 12 64 21" stroke="#000" fill="transparent"/>
-        			<path d="M55 6 Q57 10 56.75 16.5" stroke="#000" fill="transparent"/>
-        			<path d="M60 6 Q58 10 58.5 16.5" stroke="#000" fill="transparent"/>
-        			<text id="shortnum" style="font-size:inherit;" class="nummaya" alignment-baseline="middle" transform="translate(45,23) rotate(270)" fill="red">𝋤</text>
-        		</svg><br/>
-        		<span id="romanised_sc_wrap"><span id="katun_number_rom">4</span>&nbsp;Ajaw</span>
-        		<br/>
-        		<span id="first_time_sc" class="info">If indeed K'atuns were counted like decades, then it stands to reason that the first day of the Long Count was not the first day of a K'atun at all. For practicality, the converter simply assumes it part of a "ghost" K'atun 4 Ajaw</span>
-        	</span>
-				</div>
-				<div class="glyphline withon"></div>
-				<div class="glowline withoff"></div>
+			<div id="panmesos">
 				<div id="row_jade">
 					<span id="row_jade_head">
 						<span class="caltitle">
@@ -172,7 +131,8 @@
 					</span>
 					<div id="sheet_count">
 						<header id="sheet_count_head" class="sheethead">
-							<h4><span id="sheet_count_year">8 Rabbit</span>&nbsp;&mdash;&nbsp;<span id="sheet_count_month">Tosostontli</span></h4>
+							<h4><span id="sheet_count_year">8 Rabbit</span>&nbsp;&mdash;&nbsp;<span
+									id="sheet_count_month">Tosostontli</span></h4>
 						</header>
 						<table id="sheet_count_days">
 							<tbody>
@@ -209,17 +169,50 @@
 					</div>
 					<span id="count_specs">
 						<h4>(Enanwixui:&nbsp;<span id="count_thebe">#####</span>T&middot;<span id="count_ani">#####</span>A)</h4>
-					</span><div id="spacers_mayfix"><br/><br/></div>
+					</span>
+					<div id="spacers_mayfix"><br /><br /></div>
 				</div>
-				<!--div class="glyphline withon"></div>
+				<div class="glyphline withon"></div>
 				<div class="glowline withoff"></div>
-				<div id="row_katun"><span class="caltitle">
-					<h3>Short Count</h3>
-				</span>
-				<div class="hlarrow body"></div>
-				<div class="caltitle">
-					<span>K'atun&nbsp;</span><span id="katunmsg"></span><span>&nbsp;Ajaw</span></div>
-				</div-->
+				<div id="row_long">
+					<!-- select id="piktun"></select>.
+					<select id="b_ak_tun"></select>.
+					<select id="k_atun"></select>.
+					<select id="tun"></select>.
+					<select id="winal"></select>.
+					<select id="k_in"></select
+					this was supposed to be for the rev-conv but i'ven't yet figured that out -->
+					<span id="row_long_head">
+						<span class="caltitle">
+							<h3>Long Count</h3>
+						</span>
+						<div class="hlarrow body"></div>
+						<span id="msgfin">0.0.0.0.0.0</span>
+					</span>
+				</div>
+				<div id="row_shorts">
+					<span class="row_shorts_head">
+						<span class="shortitle caltitle">
+						<h4 title="Short Count">&#x2767; Waslason K'atun</h4>
+						</span>
+					</span>
+					<span id="kweel_wrap">
+						<svg id="kweel" viewbox="0 0 100 25" preserveAspectRatio="none">
+							<path d="M0 25 Q50 -20 100 25" stroke="#000" fill="transparent"/>
+							<circle cx="57.5" cy="15" r="9" stroke="#000" fill="transparent"/>
+							<circle cx="57.5" cy="20" r="1.2" stroke="#000" fill="transparent"/>
+							<circle cx="53" cy="13" r="1.2" stroke="#000" fill="transparent"/>
+							<circle cx="62" cy="13" r="1.2" stroke="#000" fill="transparent"/>
+							<path d="M51 21 Q57.5 12 64 21" stroke="#000" fill="transparent"/>
+							<path d="M55 6 Q57 10 56.75 16.5" stroke="#000" fill="transparent"/>
+							<path d="M60 6 Q58 10 58.5 16.5" stroke="#000" fill="transparent"/>
+							<text id="shortnum" style="font-size:inherit;" class="nummaya" alignment-baseline="middle" transform="translate(45,23) rotate(270)" fill="red">𝋤</text>
+						</svg><br/>
+						<span id="romanised_sc_wrap"><span id="katun_number_rom">4</span>&nbsp;Ajaw</span>
+						<br/>
+						<span id="first_time_sc" class="info">If indeed K'atuns were counted like decades, then it stands to reason that the first day of the Long Count was not the first day of a K'atun at all. For practicality, the converter simply assumes it part of a "ghost" K'atun 4 Ajaw</span>
+					</span>
+				</div>
 			</div>
 			<span id="cal_scount">
 				<span class="caltitle"><h3>Day Count</h3></span><span class="info subt">Now Displaying:&nbsp;<span id="name_scal"></span></span><div class="hlarrow body"></div>

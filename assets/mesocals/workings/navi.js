@@ -1,5 +1,5 @@
 document.getElementById('forcer').addEventListener('click', () => {
-    if (document.getElementById('year_greg').value == "0") {
+    if (parseInt(document.getElementById('year_greg').value) == 0) {
         alert('The Gregorian Calendar skips from year -1 directly to 1, thus having no year 0. Input the correct year and try again.');
     }
     let formDataGreggy = document.getElementById('year_greg').value + '/' + document.getElementById('month_greg').value + '/' + document.getElementById('day_greg').value;
